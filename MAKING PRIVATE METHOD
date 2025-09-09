@@ -1,1 +1,20 @@
+public class MyClass {
+    // Private method
+    private void myPrivateMethod() {
+        System.out.println("This is a private method.");
+    }
+
+    public void publicMethod() {
+        // You can call the private method inside the class
+        myPrivateMethod();
+    }
+}
+
+public class Test {
+    public static void main(String[] args) {
+        MyClass obj = new MyClass();
+        obj.publicMethod();  // This works
+        // obj.myPrivateMethod(); // Error: myPrivateMethod() has private access in MyClass
+    }
+}
 
